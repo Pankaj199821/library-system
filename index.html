@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <img class="lib" src="img/library.jpg" alt="library" />
+    <div class="container">
+      <h1>Library Card Application</h1>
+
+      <p class="submitmsg">Thanks for submitting</p>
+      <form id="libraryCardForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required />
+
+        <label for="phone">Phone Number:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          pattern="[0-9]{10}"
+          required
+        />
+
+        <label for="course">Course:</label>
+        <input type="text" id="course" name="course" required />
+
+        <label for="college">Name of College:</label>
+        <input type="text" id="college" name="college" required />
+
+        <label for="college">Enrollment No:</label>
+        <input
+          type="text"
+          id="Enrollment"
+          name="enrollment"
+          pattern="[0-10]"
+          required
+        />
+
+        <label for="photo">Upload Photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*" required />
+
+        <button type="button" id="submitBtn">Submit</button>
+      </form>
+      <div id="cardPreview" class="card">
+        <h2>Library Card Preview</h2>
+        <div class="card-photo">
+          <img id="cardPhoto" src="" alt="User Photo" />
+        </div>
+        <p><strong>Name:</strong> <span id="cardName"></span></p>
+        <p><strong>Date of Birth:</strong> <span id="cardDob"></span></p>
+        <p><strong>Phone:</strong> <span id="cardPhone"></span></p>
+        <p><strong>Course:</strong> <span id="cardCourse"></span></p>
+        <p><strong>College:</strong> <span id="cardCollege"></span></p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
